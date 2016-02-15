@@ -9,10 +9,10 @@ import java.util.Map;
 @Repository
 public class UserRepository {
 
-    private Map<Integer, User> usersById = new HashMap<>();
+    private final Map<Integer, User> usersById = new HashMap<>();
 
-    public int saveUser(User user) {
-        return usersById.put(user.getId(), user).getId();
+    public void saveUser(User user) {
+        usersById.put(user.getId(), user);
     }
 
     public User getById(int id) {

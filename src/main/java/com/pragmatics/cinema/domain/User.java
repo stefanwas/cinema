@@ -1,13 +1,15 @@
 package com.pragmatics.cinema.domain;
 
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 
 public class User {
     private int id;
     private String name;
+    private final List<Ticket> bookedTickets = new LinkedList<>();
 
     public User() {
-
     }
 
     public User(int id, String name) {
@@ -32,7 +34,11 @@ public class User {
     }
 
     public boolean hasBirthdayOn(Date date) {
-        return false;
+        return true;
+    }
+
+    public List<Ticket> getBookedTickets() {
+        return bookedTickets;
     }
 
     @Override

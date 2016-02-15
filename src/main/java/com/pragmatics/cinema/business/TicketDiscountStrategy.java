@@ -11,6 +11,6 @@ public class TicketDiscountStrategy implements DiscountStrategy {
 
     @Override
     public double getDiscount(User user, Event event, Date date) {
-        return 0.5;
+        return (user.getBookedTickets().size() % 5 == 0) ? 0.5 : 0.0;
     }
 }
