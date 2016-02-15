@@ -1,6 +1,9 @@
+PART 1
 - User init config from class DONE
+- PropertiesPlaceholderConfigurer DONE
+- Auditorium Service (read from file)
+- Spring context config test
 
-1. Auditorium Service
-- read from file
-
--Spring context config test
+----------
+PART 2
+- aspects
