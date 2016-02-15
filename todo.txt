@@ -1,5 +1,5 @@
 PART 1
-- User init config from class DONE
+- User init config from xml or class DONE
 - PropertiesPlaceholderConfigurer DONE
 - Auditorium Service (read from file)
 - Spring context config test
@@ -7,3 +7,8 @@ PART 1
 ----------
 PART 2
 - aspects
+
+
+PART 3
+
+- DB

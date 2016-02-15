@@ -21,8 +21,8 @@ public class AppConfiguration {
     }
 
     /**
-     * PropertiesPlaceholderConfigurer isa  BeanFactoryPostprocessor - once registered it allows to substitute
-     * all properties with values.
+     * PropertiesPlaceholderConfigurer is a BeanFactoryPostprocessor - once registered it allows to substitute
+     * all property placeholders with values.
      *
      * In general a BeanFactoryPostprocessor allows for custom modification of application's beans.
      * Application contexts can auto-detect BeanFactoryPostProcessor beans in their bean definitions and apply
