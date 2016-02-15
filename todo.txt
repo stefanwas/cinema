@@ -1,0 +1,6 @@
+- User init config from class DONE
+
+1. Auditorium Service
+- read from file
+
+-Spring context config test

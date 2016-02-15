@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+  <context:annotation-config />
+  <context:component-scan base-package="com.pragmatics.cinema"></context:component-scan>
+  <!--<context:property-placeholder location="classpath:*.properties" />-->
+
+  <bean id="cinema" class="com.pragmatics.cinema.Cinema"></bean>
+
+  <!--<bean id="auditorium1" class="com.epam.cinema.domain.Auditorium">-->
+    <!--<constructor-arg name="name" value="${auditorium1.name}" />-->
+    <!--<constructor-arg name="numberOfSeats" value="${auditorium1.numberOfSeats}" />-->
+    <!--<constructor-arg name="vipSeats"-->
+      <!--value="#{'${auditorium1.vipSeats}'.split(',')}" />-->
+  <!--</bean>-->
+
+  <!--<bean id="auditorium2" class="com.epam.cinema.domain.Auditorium">-->
+    <!--<constructor-arg name="name" value="${auditorium2.name}" />-->
+    <!--<constructor-arg name="numberOfSeats" value="${auditorium2.numberOfSeats}" />-->
+    <!--<constructor-arg name="vipSeats"-->
+      <!--value="#{'${auditorium2.vipSeats}'.split(',')}" />-->
+  <!--</bean>-->
+
+  <!--<bean id="auditorium3" class="com.epam.cinema.domain.Auditorium">-->
+    <!--<constructor-arg name="name" value="${auditorium3.name}" />-->
+    <!--<constructor-arg name="numberOfSeats" value="${auditorium3.numberOfSeats}" />-->
+    <!--<constructor-arg name="vipSeats"-->
+      <!--value="#{'${auditorium3.vipSeats}'.split(',')}" />-->
+  <!--</bean>-->
+
+</beans>
