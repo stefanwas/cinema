@@ -2,6 +2,7 @@ package com.pragmatics.cinema;
 
 import com.pragmatics.cinema.domain.Event;
 import com.pragmatics.cinema.domain.User;
+import com.pragmatics.cinema.repository.CounterRepository;
 import com.pragmatics.cinema.service.*;
 import org.springframework.stereotype.Component;
 
@@ -22,6 +23,8 @@ public class Cinema {
     private BookingService bookingService;
     @Resource
     private EventService eventService;
+    @Resource
+    private CounterRepository counterRepository;
 
     public void demo() {
 
@@ -39,16 +42,24 @@ public class Cinema {
 
         // event service
         eventService.createEvent(new Event(1, "Star Wars"));
-        Event event = eventService.getById(1);
-        System.out.println(event);
+        eventService.createEvent(new Event(2, "James Bond"));
+        Event event1 = eventService.getById(1);
+        Event event2 = eventService.getById(2);
+        Event event3 = eventService.getById(1);
+        System.out.println(event1);
+        System.out.println(event2);
+        System.out.println(event3);
 
         // discount service
         Date today = new Date();
 
-        double discount1 = discountService.getDiscount(user1, event, today);
+        double discount1 = discountService.getDiscount(user1, event1, today);
         System.out.println("Discount 1:" + discount1);
-        double discount2 = discountService.getDiscount(user1, event, today);
+        double discount2 = discountService.getDiscount(user1, event2, today);
         System.out.println("Discount 2:" + discount2);
+
+        System.out.println("Counter for event1=" + counterRepository.getCounterForEvent(1));
+        System.out.println("Counter for event2=" + counterRepository.getCounterForEvent(2));
 
     }
 }

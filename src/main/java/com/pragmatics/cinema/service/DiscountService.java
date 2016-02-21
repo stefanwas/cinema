@@ -14,10 +14,10 @@ import java.util.OptionalDouble;
 public class DiscountService {
 
     @Resource
-    private List<DiscountStrategy> discountStrategis;
+    private List<DiscountStrategy> discountStrategies;
 
     public double getDiscount(User user, Event event, Date date) {
-        OptionalDouble maxDiscount = discountStrategis
+        OptionalDouble maxDiscount = discountStrategies
                 .stream()
                 .mapToDouble(strategy -> strategy.getDiscount(user, event, date))
                 .max();

@@ -5,6 +5,7 @@ import com.pragmatics.cinema.business.DiscountStrategy;
 import com.pragmatics.cinema.business.TicketDiscountStrategy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
@@ -12,6 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Configuration
+@EnableAspectJAutoProxy
 @PropertySource("classpath:application.properties")
 public class AppConfiguration {
 
